@@ -1,3 +1,3 @@
 README.md
-blog1.html
+index.html
 sapphira.jpg
