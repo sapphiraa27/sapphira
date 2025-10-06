@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog Galaxy — Profil & Post</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --page-bg: #f4f5f6;
+      --card-bg: #ffffff;
+      --text-strong: #2f3336;
+      --text-muted: #8f9498;
+      --accent: #6e7376;
+      --shadow: 0 6px 18px rgba(47,51,54,0.06);
+      --radius: 12px;
+      --max-width: 880px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--page-bg);
+      color: var(--text-strong);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:48px 20px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .profile{
+      background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(250,250,250,0.99));
+      border-radius: var(--radius);
+      padding:22px;
+      box-shadow: var(--shadow);
+      text-align:center;
+      position:sticky;
+      top:36px;
+    }
+
+    .profile img{
+      width:128px;
+      height:128px;
+      object-fit:cover;
+      border-radius:50%;
+      border:6px solid #eef0f1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      margin-bottom:12px;
+    }
+
+    .name{
+      font-size:20px;
+      font-weight:600;
+      margin:4px 0;
+    }
+
+    .role{
+      font-size:13px;
+      color:var(--text-muted);
+      margin-bottom:10px;
+    }
+
+    .meta{
+      text-align:left;
+      background:transparent;
+      margin-top:12px;
+      font-size:13px;
+      color:var(--text-muted);
+    }
+
+    .meta b{color:var(--text-strong); font-weight:600}
+
+    .main{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: var(--shadow);
+    }
+
+    .site-title{
+      font-size:14px;
+      color:var(--accent);
+      font-weight:600;
+      letter-spacing:0.6px;
+      margin-bottom:8px;
+    }
+
+    .post-title{
+      font-size:18px;
+      margin:6px 0 12px 0;
+      color:var(--text-strong);
+    }
+
+    .post-content{
+      line-height:1.6;
+      color: #3b3f42;
+      font-size:15px;
+      white-space:pre-wrap;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--text-muted);
+      font-size:13px;
+      margin-top:8px;
+    }
+
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr; padding-bottom:20px}
+      .profile{position:relative; top:0; display:flex; gap:12px; align-items:center; text-align:left}
+      .profile img{width:80px;height:80px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar / Profile -->
+    <aside class="profile card" aria-label="Profil">
+      <img src="sapphira.jpg" alt="Foto Pembuat">
+      <div class="name">SAPPHIRA</div>
+      <div class="role">Mahasiswa Teknik Informatika — UBP Karawang</div>
+
+      <div class="meta">
+        <div><b>NIM:</b> 24416255201148</div>
+        <div style="margin-top:8px"><b>Email:</b><br>
+          <a href="mailto:if24.sapphira@mhs.ubpkarawang.ac.id" style="color:var(--accent); text-decoration:none;">if24.sapphira@mhs.ubpkarawang.ac.id</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <section class="card">
+        <div class="site-title">Basis Data.</div>
+        
+        <!-- 🎥 Video YouTube di bagian atas -->
+        <div style="text-align:center; margin:16px 0;">
+          <iframe width="100%" height="320"
+            src="https://www.youtube.com/embed/xGXoeO5WN0E"
+            title="POST 1 : TUTORIAL INSTALLASI 1 DBMS (MYSQL) DI WINDOWS"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08);">
+          </iframe>
+        </div>
+
+        <div class="post-content">
+<b><div style="font-size: 18px;">Post 2: Apa itu Attribute, Entitas, dan Relasi dalam ERD?</div></b>
+Dalam <b>Entity Relationship Diagram (ERD)</b>, terdapat tiga komponen utama yang digunakan untuk menggambarkan struktur data di dalam sistem:
+
+<b>1. Atribut (Attribute)</b>  
+Atribut adalah detail atau karakteristik yang dimiliki oleh suatu entitas. Setiap atribut menyimpan informasi spesifik tentang entitas tersebut.  
+<b>Contoh:</b>  
+• Barang → Kode Barang, Nama Barang, Harga, Jumlah  
+• Customer → ID Customer, Nama, Nomor Telepon, Alamat  
+• Transaksi → ID Transaksi, Tanggal, Total Pembayaran  
+
+<b>2. Entitas (Entity)</b>  
+Entitas merupakan objek nyata atau konsep yang datanya perlu disimpan di dalam basis data. Entitas bisa berupa orang, benda, tempat, atau peristiwa yang memiliki makna tertentu dalam sistem.  
+<b>Contoh:</b> Barang, Customer, dan Transaksi.  
+
+<b>3. Relasi (Relationship)</b>  
+Relasi menggambarkan bagaimana satu entitas berhubungan dengan entitas lainnya. Hubungan ini penting untuk mengetahui keterkaitan antar data.  
+<b>Contoh:</b>  
+• Customer melakukan Transaksi  
+• Transaksi melibatkan Barang  
+        </div>
+      </section>
+
+      <footer class="card">
+        © 2025 Blog Basis Data — <a href="https://www.ubpkarawang.ac.id" style="color:var(--accent); text-decoration:none">UBP Karawang</a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
